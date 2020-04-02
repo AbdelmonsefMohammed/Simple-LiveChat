@@ -8,7 +8,21 @@ body,html{
 .navbar-light .navbar-nav .nav-link , .navbar-light .navbar-brand , form label, .card-header{
     color: white;
 }
+.pending{
+    position: absolute;
+    left: 13px;
 
+    background-color: #b600ff;
+    margin: 0;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    padding-left: 5px;
+    color: #ffffff;
+    font-size: 12px;
+    z-index: 9;
+}
 .chat{
     margin-top: auto;
     margin-bottom: auto;
@@ -124,6 +138,20 @@ border-radius: 50%;
 bottom: 0.2em;
 right: 0.4em;
 border:1.5px solid white;
+}
+.pending{
+    position: absolute;
+    left: 2px;
+    background-color: #b600ff;
+    margin: 0;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    padding-left: 5px;
+    color: #ffffff;
+    font-size: 12px;
+    z-index: 9;
 }
 .offline{
 background-color: #c23616 !important;

@@ -18,8 +18,23 @@ $factory->define(App\User::class, function (Faker $faker) {
 
     return [
         'name' => $faker->name,
+        'avatar' => 'https://via.placeholder.com/150',
         'email' => $faker->unique()->safeEmail,
         'password' => $password ?: $password = bcrypt('secret'),
         'remember_token' => str_random(10),
+    ];
+});
+
+$factory->define(App\Message::class, function (Faker $faker) {
+    do {
+        $from = rand(1, 30);
+        $to = rand(1, 30);
+        $is_read = rand(0, 1);
+    } while ($from === $to);
+    return [
+        'from' => $from,
+        'to' => $to,
+        'message' => $faker->sentence,
+        'is_read' => $is_read
     ];
 });
