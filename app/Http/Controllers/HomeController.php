@@ -54,8 +54,12 @@ class HomeController extends Controller
             $query->where('from', $my_id)->where('to', $user_id);
         })->get();
         
+        $user = User::where('id',$user_id)->first();
+        $auth = User::where('id',$my_id)->first();
         return view('messages.index', [
             'messages' => $messages,
+            'user'     => $user,
+            'auth'     => $auth,
             ]);
 
     }

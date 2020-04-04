@@ -1,12 +1,12 @@
 <div class="card card-h">
-    {{-- <div class="card-header msg_head">
+    <div class="card-header msg_head">
         <div class="d-flex bd-highlight">
             <div class="img_cont">
-                <img src="{{asset('img/1.jpg')}}" class="rounded-circle user_img">
+                <img src="{{$user->avatar}}" class="rounded-circle user_img">
                 <span class="online_icon"></span>
             </div>
             <div class="user_info">
-                <span>Chat with Khalid</span>
+                <span>Chat with {{$user->name}}</span>
                 <p>1767 Messages</p>
             </div>
             <div class="video_cam">
@@ -22,7 +22,7 @@
                 <li><i class="fas fa-ban"></i> Block</li>
             </ul>
         </div>
-    </div> --}}
+    </div>
     <div class="card-body msg_card_body">
         @foreach ($messages as $message)
             @if($message->from == Auth::id())
@@ -33,15 +33,14 @@
                         <span class="msg_time_send">{{ date('d M y, h:i a', strtotime($message->created_at)) }}</span>
                     </div>
                     <div class="img_cont_msg">
-                <img src="{{asset('img/2.jpg')}}" class="rounded-circle user_img_msg">
+                <img src="{{$auth->avatar}}" class="rounded-circle user_img_msg">
                     </div>
                 </div>
 
             @else
-
                 <div class="d-flex justify-content-start mb-4">
                     <div class="img_cont_msg">
-                        <img src="{{asset('img/1.jpg')}}" class="rounded-circle user_img_msg">
+                        <img src="{{$user->avatar}}" class="rounded-circle user_img_msg">
                     </div>
                     <div class="msg_cotainer">
                         {{ $message->message }}
