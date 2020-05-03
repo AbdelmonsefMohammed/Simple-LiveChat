@@ -26,7 +26,7 @@
 									@if($user->unread)
 										<span class="pending">{{$user->unread}}</span>
 									@endif
-									<img src="{{ $user->avatar }}" class="rounded-circle user_img">
+									<img src="/img/{{ $user->avatar }}" class="rounded-circle user_img">
 									<span class="online_icon"></span>
 								</div>
 								<div class="user_info">
