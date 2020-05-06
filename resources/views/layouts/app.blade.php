@@ -75,7 +75,6 @@
     <script src="{{asset('js/jquery-3.4.1.js')}}"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script>
     <script src="{{asset('js/bootstrap.js')}}"></script>
-    <script src="{{asset('js/main.js')}}"></script>
     <script>
         var receiver_id = '';
 var my_id = "{{ Auth::id() }}";
