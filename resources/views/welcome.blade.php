@@ -2,13 +2,9 @@
 
 @section('content')
 <style>
-
-
-
 .con {
 height: 100%;
   display: flex;
-
 }    
 .alrazy-title {
   margin: auto;
@@ -71,11 +67,42 @@ height: 100%;
 .splitting-mark {
   color: #FFF !important;
 }
+.login-container{
+  display: flex;
+  margin: 40px 0 0 0;
+}
+.login-container .login-background{
+
+    display: flex;
+    justify-content: center;
+    width: 240px;
+    height: 90px;
+    background-color: white;
+    margin: auto;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 25px;
+}
+.login-container .login-button{
+    display: flex;
+    align-items: center;
+}
+.login-container .login-button a{
+    width: 240px;
+    text-decoration: none;
+    color: #333;
+}
 </style>
 
 <div class="con">
     <div class="alrazy-title" data-splitting>Welcome to Chat Chat</div>
 </div>
+<div class="login-container">
+  <div class="login-background">
+    <div class="login-button"><a href="/login"> Login</a></div>
+  </div>
+</div>
+
 <script src="https://unpkg.com/splitting@1.0.0/dist/splitting.js"></script>
 <script>
     Splitting();
